@@ -144,7 +144,6 @@ void QMatrixViewer :: drawGauss( void )
 	QPainter painter( this );
 	painter.setRenderHint( QPainter::Antialiasing, true );
 	char part[20];
-	int diff = 0;
 	//DRAW NUMBERS
 	painter.setPen( QPen( Qt::black, 1, Qt::SolidLine, Qt::RoundCap ) );
 	for ( int i = 0; i < matrix_a->getAuxiliar()->getLines(); i++ )

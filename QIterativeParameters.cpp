@@ -49,7 +49,7 @@ void QIterativeParameters :: initComponents( void )
 	for ( int line = 0; line < lines; line++ ) {
 		QValueSetter * x0_value_setter = new QValueSetter( this, line, 0, 1, true );
 		connect( x0_value_setter->getValueSetter(), SIGNAL( valueChanged( double ) ), x0_value_setter, SLOT( valueSetted( double ) ) );
-		connect( x0_value_setter, SIGNAL( emitIndexes( int, int, double ) ), this, SLOT( setX0Value( int, int, double ) ) );
+        connect( x0_value_setter, SIGNAL( emitIndexes( int, int, double ) ), this, SLOT( setX0Value( int, double ) ) );
 		x0_layout->addWidget( x0_value_setter );
 	}
 	//
@@ -59,7 +59,7 @@ void QIterativeParameters :: initComponents( void )
 	//
 	QValueSetter * error_value_setter = new QValueSetter( this, 0, 0, 1, false );
 	connect( error_value_setter->getValueSetter(), SIGNAL( valueChanged( double ) ), error_value_setter, SLOT( valueSetted( double ) ) );
-	connect( error_value_setter, SIGNAL( emitIndexes( int, int, double ) ), this, SLOT( setError( int, int, double ) ) );
+    connect( error_value_setter, SIGNAL( emitIndexes( int, int, double ) ), this, SLOT( setError( double ) ) );
 	error_layout->addWidget( error_value_setter );
 	//
 	//BTN OK
