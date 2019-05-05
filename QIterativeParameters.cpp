@@ -21,15 +21,12 @@ void QIterativeParameters :: closeEvent( QCloseEvent * event )
 	
 }
 //SETS
-void QIterativeParameters :: setX0Value( int i, int j, double value )
+void QIterativeParameters :: setX0Value( int i, double value )
 {
-	//delete &j;
 	emit emitX0Value( i, value );
 }
-void QIterativeParameters :: setError( int i, int j, double value )
+void QIterativeParameters :: setError( double value )
 {
-	//delete &i;
-	//delete &j;
 	emit emitErrorValue( value );
 }
 //GETS

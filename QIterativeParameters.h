@@ -48,8 +48,8 @@ signals:
 	void emitX0Value( int, double );
 	void emitErrorValue( double );
 	private slots:
-	void setX0Value( int, int, double );
-	void setError( int, int, double );
+    void setX0Value( int, double );
+    void setError( double );
 };
 
 #endif
